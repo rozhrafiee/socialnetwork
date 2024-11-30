@@ -1,0 +1,17 @@
+import networkx as nx
+import matplotlib.pyplot as plt
+
+# Load Zachary's Karate Club dataset
+G = nx.karate_club_graph()
+
+# Display basic graph information
+print(f"Number of nodes: {G.number_of_nodes()}")
+print(f"Number of edges: {G.number_of_edges()}")
+
+# List nodes and edges
+print("List of nodes:", list(G.nodes))
+print("List of edges:", list(G.edges))
+
+# Visualize the graph
+nx.draw(G, with_labels=True, node_color="skyblue", node_size=700)
+plt.show()
